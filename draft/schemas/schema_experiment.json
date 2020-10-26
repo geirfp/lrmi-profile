@@ -193,6 +193,126 @@
         "placeholder": "The language of the resource"
       }
     },
+    
+        "author": {
+            "$id": "#/properties/author",
+            "type": "array",
+            "title": "The author schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "@type": "Person",
+                        "givenName": "Gallus",
+                        "familyName": "LeBeau"
+                    },
+                    {
+                        "@type": "Organization",
+                        "legalName": "Dev Learning"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/author/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/author/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "@type": "Person",
+                                "givenName": "Gallus",
+                                "familyName": "LeBeau"
+                            }
+                        ],
+                        "required": [
+                            "@type",
+                            "givenName",
+                            "familyName"
+                        ],
+                        "properties": {
+                            "@type": {
+                                "$id": "#/properties/author/items/anyOf/0/properties/%40type",
+                                "type": "string",
+                                "title": "The @type schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Person"
+                                ]
+                            },
+                            "givenName": {
+                                "$id": "#/properties/author/items/anyOf/0/properties/givenName",
+                                "type": "string",
+                                "title": "The givenName schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Gallus"
+                                ]
+                            },
+                            "familyName": {
+                                "$id": "#/properties/author/items/anyOf/0/properties/familyName",
+                                "type": "string",
+                                "title": "The familyName schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "LeBeau"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    {
+                        "$id": "#/properties/author/items/anyOf/1",
+                        "type": "object",
+                        "title": "The second anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "@type": "Organization",
+                                "legalName": "Dev Learning"
+                            }
+                        ],
+                        "required": [
+                            "@type",
+                            "legalName"
+                        ],
+                        "properties": {
+                            "@type": {
+                                "$id": "#/properties/author/items/anyOf/1/properties/%40type",
+                                "type": "string",
+                                "title": "The @type schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Organization"
+                                ]
+                            },
+                            "legalName": {
+                                "$id": "#/properties/author/items/anyOf/1/properties/legalName",
+                                "type": "string",
+                                "title": "The legalName schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Dev Learning"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },    
+    
     "publisher": {
       "title": "Publisher",
       "type": "array",
@@ -321,7 +441,7 @@
         "educationalAlignment": {
             "$id": "#/properties/educationalAlignment",
             "type": "array",
-            "title": "The educationalAlignment schema",
+            "title": "Educational Alignment schema",
             "description": "An explanation about the purpose of this instance.",
             "default": [],
             "examples": [
@@ -368,7 +488,6 @@
                             "@type",
                             "alignmentType",
                             "educationalFramework",
-                            "targetDescription",
                             "targetName",
                             "targetUrl"
                         ],
@@ -378,7 +497,7 @@
                                 "type": "string",
                                 "title": "The @type schema",
                                 "description": "An explanation about the purpose of this instance.",
-                                "default": "",
+                                "default": "AlignmentObject",
                                 "examples": [
                                     "AlignmentObject"
                                 ]
@@ -388,7 +507,7 @@
                                 "type": "string",
                                 "title": "The alignmentType schema",
                                 "description": "An explanation about the purpose of this instance.",
-                                "default": "",
+                                "default": "teaches",
                                 "examples": [
                                     "assesses"
                                 ]
@@ -398,7 +517,7 @@
                                 "type": "string",
                                 "title": "The educationalFramework schema",
                                 "description": "An explanation about the purpose of this instance.",
-                                "default": "",
+                                "default": "Kunnskapsløftet",
                                 "examples": [
                                     "Kunnskapsløftet"
                                 ]
@@ -1254,7 +1373,8 @@
       },
       "additionalProperties": false,
       "suggested": [
-        "de",
+        "nb",
+        "nn",
         "en"
       ]
     }
