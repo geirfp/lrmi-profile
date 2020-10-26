@@ -5,7 +5,7 @@
   "type": "object",
   "default": {
     "@context": [
-      "https://w3id.org/geirfp/lrmi-profile/draft/context.jsonld"
+      "http://schema.org"
     ]
   },
   "properties": {
@@ -17,7 +17,7 @@
           "type": "string",
           "format": "uri",
           "enum": [
-            "https://w3id.org/geirfp/lrmi-profile/draft/context.jsonld"
+            "http://schema.org"
           ]
         },
         {
@@ -500,7 +500,10 @@
                                 "default": "AlignmentObject",
                                 "examples": [
                                     "AlignmentObject"
-                                ]
+                                ],
+      "_display": {
+        "className": "hidden"
+      }
                             },
                             "alignmentType": {
                                 "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/alignmentType",
