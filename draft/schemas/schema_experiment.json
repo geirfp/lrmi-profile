@@ -317,6 +317,130 @@
         }
       }
     },
+
+        "educationalAlignment": {
+            "$id": "#/properties/educationalAlignment",
+            "type": "array",
+            "title": "The educationalAlignment schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "assesses",
+                        "educationalFramework": "Kunnskapsløftet",
+                        "targetDescription": "beskrive og bruke plassverdisystemet for desimaltal, rekne med positive og negative heile tal, desimaltal, brøkar og prosent og plassere dei ulike storleikane på tallina",
+                        "targetName": "K15185",
+                        "targetUrl": "http://psi.udir.no/kl06/K15185"
+                    },
+                    {
+                        "@type": "AlignmentObject",
+                        "alignmentType": "assesses",
+                        "educationalFramework": "Kunnskapsløftet",
+                        "targetDescription": "utvikle, bruke og diskutere metodar for hovudrekning, overslagsrekning og skriftleg rekning og bruke digitale verktøy i berekningar",
+                        "targetName": "K15186",
+                        "targetUrl": "http://psi.udir.no/kl06/K15186"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/educationalAlignment/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/educationalAlignment/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "@type": "AlignmentObject",
+                                "alignmentType": "assesses",
+                                "educationalFramework": "Kunnskapsløftet",
+                                "targetDescription": "beskrive og bruke plassverdisystemet for desimaltal, rekne med positive og negative heile tal, desimaltal, brøkar og prosent og plassere dei ulike storleikane på tallina",
+                                "targetName": "K15185",
+                                "targetUrl": "http://psi.udir.no/kl06/K15185"
+                            }
+                        ],
+                        "required": [
+                            "@type",
+                            "alignmentType",
+                            "educationalFramework",
+                            "targetDescription",
+                            "targetName",
+                            "targetUrl"
+                        ],
+                        "properties": {
+                            "@type": {
+                                "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/%40type",
+                                "type": "string",
+                                "title": "The @type schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "AlignmentObject"
+                                ]
+                            },
+                            "alignmentType": {
+                                "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/alignmentType",
+                                "type": "string",
+                                "title": "The alignmentType schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "assesses"
+                                ]
+                            },
+                            "educationalFramework": {
+                                "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/educationalFramework",
+                                "type": "string",
+                                "title": "The educationalFramework schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Kunnskapsløftet"
+                                ]
+                            },
+                            "targetDescription": {
+                                "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/targetDescription",
+                                "type": "string",
+                                "title": "The targetDescription schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "beskrive og bruke plassverdisystemet for desimaltal, rekne med positive og negative heile tal, desimaltal, brøkar og prosent og plassere dei ulike storleikane på tallina"
+                                ]
+                            },
+                            "targetName": {
+                                "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/targetName",
+                                "type": "string",
+                                "title": "The targetName schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "K15185"
+                                ]
+                            },
+                            "targetUrl": {
+                                "$id": "#/properties/educationalAlignment/items/anyOf/0/properties/targetUrl",
+                                "type": "string",
+                                "title": "The targetUrl schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "http://psi.udir.no/kl06/K15185"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        },
+    
+    
     "mainEntityOfPage": {
       "title": "Metadata/Structured descriptions",
       "description": "This object contains metametadata, i.e. information about the structured description(s) of the resource and its source(s).",
