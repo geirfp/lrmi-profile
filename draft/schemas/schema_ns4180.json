@@ -1,11 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "OER",
-  "description": "This is a generic JSON schema for describing a learning resource with schema.org according to the Norwegian metadata standard NS 4180:2020",
+  "title": "Ns 4180:2020 Learning Resource metadata",
+  "description": "This is a JSON schema for describing a learning resource with schema.org according to the Norwegian metadata standard NS 4180:2020",
   "type": "object",
   "default": {
-    "@context": "http://schema.org"
+    "@context": [
+      "https://w3id.org/kim/lrmi-profile/draft/context.jsonld",
+      {
+        "@language": "nb"
       }
+    ]
   },
   "properties": {
     "@context": {
