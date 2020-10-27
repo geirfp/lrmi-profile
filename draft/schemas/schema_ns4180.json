@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OER",
+  "description": "This is a generic JSON schema for describing a learning resource with schema.org according to the Norwegian metadata standard NS 4180:2020",
+  "type": "object",
+  "default": {
+    "@context": "http://schema.org"
+      }
+  },
+  "properties": {
+    "@context": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/context-schema.json"
+    },
+    "id": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/id.json"
+    },
+    "type": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/type.json"
+    },
+    "name": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/name.json"
+    },
+    "creator": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/creator.json"
+    },
+    "description": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/description.json"
+    },
+    "about": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/about.json"
+    },
+    "license": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/license.json"
+    },
+    "image": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/image.json"
+    },
+    "dateCreated": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/dateCreated.json"
+    },
+    "inLanguage": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/inLanguage.json"
+    },
+    "publisher": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/publisher.json"
+    },
+    "learningResourceType": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/learningResourceType.json"
+    },
+    "audience": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/audience.json"
+    },
+    "isBasedOn": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/isBasedOn.json"
+    },
+    "mainEntityOfPage": {
+      "$ref": "https://raw.githubusercontent.com/geirfp/lrmi-profile/master/draft/schemas/mainEntityOfPage.json"
+    }
+  },
+  "required": [
+    "@context",
+    "id",
+    "name"
+  ]
+}
